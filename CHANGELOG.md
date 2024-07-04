@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.1 (2024-07-04)
+
+
+### Bug Fixes
+
+* added provider namespace ([195da04](https://github.com/ShabuShabu/laravel-version/commits/195da049d4109c4a6b9d27289f9bc7af184e561f))
+
 ## 0.1.0 (2024-07-04)
 
 

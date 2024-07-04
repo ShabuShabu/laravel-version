@@ -1,10 +1,10 @@
 {
     "name": "shabushabu/laravel-version",
-    "description": "This is my package laravel-version",
+    "description": "Various version tools for Laravel based on Git tags",
     "keywords": [
         "ShabuShabu",
         "laravel",
-        "laravel-version"
+        "version"
     ],
     "homepage": "https://github.com/shabushabu/laravel-version",
     "license": "MIT",
@@ -64,7 +64,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VersionServiceProvider"
+                "ShabuShabu\\Version\\VersionServiceProvider"
             ]
         }
     },
