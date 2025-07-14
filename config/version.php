@@ -24,4 +24,19 @@ return [
     */
 
     'git_binary' => env('VERSION_GIT_BINARY', '/opt/homebrew/bin/git'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Git commands
+    |--------------------------------------------------------------------------
+    |
+    | The Git commands to use to get information
+    |
+    */
+
+    'commands' => [
+        'tag' => 'tag -l | tail -1',
+        'hash' => 'log --pretty="%h" -n1 HEAD',
+        'date' => 'log --pretty="%ci" -n1 HEAD',
+    ],
 ];
