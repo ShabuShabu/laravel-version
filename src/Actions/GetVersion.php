@@ -16,12 +16,6 @@ class GetVersion implements GetsVersion
 {
     protected array $version = [];
 
-    protected array $commands = [
-        'tag' => 'describe --tags --abbrev=0',
-        'hash' => 'log --pretty="%h" -n1 HEAD',
-        'date' => 'log --pretty="%ci" -n1 HEAD',
-    ];
-
     public function __invoke(bool $fresh = false): static
     {
         if ($fresh) {
@@ -31,7 +25,7 @@ class GetVersion implements GetsVersion
         $this->version = Cache::remember(
             'app:version',
             now()->addHours((int) config('version.cache_hours', 4)),
-            fn () => collect($this->commands)->map(
+            fn () => collect(config('version.commands'))->map(
                 fn (string $command) => $this->run($command)
             )->toArray()
         );

@@ -13,9 +13,9 @@ use function ShabuShabu\Version\version;
 it('gets the version', function () {
     $git = config('version.git_binary');
 
-    $tag = $git . ' describe --tags --abbrev=0';
-    $hash = $git . ' log --pretty="%h" -n1 HEAD';
-    $date = $git . ' log --pretty="%ci" -n1 HEAD';
+    $tag = $git . ' ' . config('version.commands.tag');
+    $hash = $git . ' ' . config('version.commands.hash');
+    $date = $git . ' ' . config('version.commands.date');
 
     Process::fake([
         $tag => 'v0.0.18',
