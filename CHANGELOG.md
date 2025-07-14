@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+## [0.3.0](https://github.com/ShabuShabu/laravel-version/compare/v0.2.0..v0.3.0) - 2025-07-14
+
+### Features
+
+- git commands are configurable - ([d6797d4](https://github.com/ShabuShabu/laravel-version/commit/d6797d48e697f4b37b9fbd3d9812f26152430c27)) - Boris Glumpler
+
 ## [0.2.0](https://github.com/ShabuShabu/laravel-version/compare/v0.1.0..0.2.0) - 2025-03-06
 
 Switched to git-cliff, so the changelog for this tag encompasses all the previous tags as well.
