@@ -7,6 +7,7 @@ namespace ShabuShabu\Version\Actions;
 use Carbon\CarbonInterface;
 use DateTimeZone;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Process;
 use ShabuShabu\Version\Actions\Contracts\GetsVersion;
@@ -24,8 +25,8 @@ class GetVersion implements GetsVersion
 
         $this->version = Cache::remember(
             'app:version',
-            now()->addHours((int) config('version.cache_hours', 4)),
-            fn () => collect(config('version.commands'))->map(
+            now()->addHours(Config::integer('version.cache_hours', 4)),
+            fn () => collect(Config::array('version.commands'))->map(
                 fn (string $command) => $this->run($command)
             )->toArray()
         );
@@ -37,7 +38,7 @@ class GetVersion implements GetsVersion
     {
         try {
             $result = Process::timeout(30)->run(
-                sprintf('%s %s', config('version.git_binary'), $command)
+                sprintf('%s %s', Config::string('version.git_binary'), $command)
             );
 
             return $result->successful() ? trim($result->output()) : '';

@@ -6,6 +6,7 @@ namespace ShabuShabu\Version;
 
 use ShabuShabu\Version\Actions\Contracts\GetsVersion;
 use ShabuShabu\Version\Actions\GetVersion;
+use ShabuShabu\Version\Commands\Version;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -21,6 +22,7 @@ class VersionServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-version')
             ->hasConfigFile()
+            ->hasCommand(Version::class)
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
