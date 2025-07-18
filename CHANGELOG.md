@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+
+## [0.4.0](https://github.com/ShabuShabu/laravel-version/compare/v0.3.0..v0.4.0) - 2025-07-18
+
+### Features
+
+- added a command to display and clear the version data - ([85889a7](https://github.com/ShabuShabu/laravel-version/commit/85889a720db810a8949bc8a3bc372d13e95ce337)) - Boris Glumpler
+
+---
+
 ## [0.3.0](https://github.com/ShabuShabu/laravel-version/compare/v0.2.0..v0.3.0) - 2025-07-14
 
 ### Features
