@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.4.1](https://github.com/ShabuShabu/laravel-version/compare/v0.4.0..v0.4.1) - 2025-09-08
+
+### Bug Fixes
+
+- git version command sorting - ([a2e277f](https://github.com/ShabuShabu/laravel-version/commit/a2e277f139b8454104c9938dc5e45672caca60de)) - Boris Glumpler
+
+---
+
 ## [0.4.0](https://github.com/ShabuShabu/laravel-version/compare/v0.3.0..v0.4.0) - 2025-07-18
 
 ### Features

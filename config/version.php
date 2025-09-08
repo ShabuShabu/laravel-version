@@ -35,7 +35,7 @@ return [
     */
 
     'commands' => [
-        'tag' => 'tag -l | tail -1',
+        'tag' => 'tag -l --sort v:refname | tail -1',
         'hash' => 'log --pretty="%h" -n1 HEAD',
         'date' => 'log --pretty="%ci" -n1 HEAD',
     ],
